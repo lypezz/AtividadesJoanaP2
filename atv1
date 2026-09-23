@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int contador;
+float consumo;
+float somador = 0;
+float media;
+
+int main() {
+
+    for (contador = 0; contador < 5; contador++) {
+
+        printf("Digite o consumo de agua: ");
+        scanf("%f", &consumo);
+
+        somador += consumo;
+
+        if (consumo <= 20) {
+            printf("Dentro da media\n");
+        } else {
+            printf("Acima da media\n");
+        }
+    }
+
+    media = somador / 5;
+
+    printf("A media dos consumos e: %f\n", media);
+
+    return 0;
+}
